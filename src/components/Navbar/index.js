@@ -2,7 +2,16 @@ import React from "react";
 import "./style.css";
 
 function Navbar(props) {
-  return <h1 className="title">{props.children}</h1>;
+  return (
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+
+      <ul className="navbar-nav">
+        <li><a className="navbar-brand" href="/">Memory Game</a></li>
+        <li className="nav-item">{props.status}</li>
+        <li className="nav-item">Score: {props.score} | Top Score: {props.topScore}</li>
+      </ul>
+    </nav>
+  )
 }
 
 export default Navbar;

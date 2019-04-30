@@ -7,10 +7,13 @@ import images from "./images.json";
 class App extends Component {
   state = {
     images,
+    status: "Click an image to begin!",
     score: 0,
+    topScore: 0,
     clickedIds: []
   };
 
+  // Shuffle the images when loaded
   componentDidMount() {
     this.shuffleImages();
   }
@@ -18,21 +21,28 @@ class App extends Component {
   imageClick = id => {
     const clickedIds = this.state.clickedIds;
 
+    // Check if image has already been clicked
     if (!clickedIds.includes(id)) {
       // Guess was correct
-      clickedIds.push(id)
+      clickedIds.push(id);
+      const score = this.state.score + 1;
+
       this.setState({
-        clickedIds,
-        score: this.state.score + 1
+        status: "You guessed correctly!",
+        score,
+        topScore: score > this.state.topScore ? score : this.state.topScore,
+        clickedIds
       });
     } else {
       // Guess was incorrect
       this.setState({
-        clickedIds: [],
-        score: 0
+        status: "You guessed incorrectly!",
+        score: 0,
+        clickedIds: []
       });
     }
 
+    // Shuffle the images after each guess
     this.shuffleImages();
   }
 
@@ -50,17 +60,23 @@ class App extends Component {
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
-      <Wrapper>
-        <Navbar>Memory Game</Navbar>
-        {this.state.images.map(item => (
-          <ImgCard
-            key={item.id}
-            id={item.id}
-            image={item.image}
-            imageClick={this.imageClick}
-          />
-        ))}
-      </Wrapper>
+      <div>
+        <Navbar
+          status={this.state.status}
+          score={this.state.score}
+          topScore={this.state.topScore}
+        />
+        <Wrapper>
+          {this.state.images.map(item => (
+            <ImgCard
+              key={item.id}
+              id={item.id}
+              image={item.image}
+              imageClick={this.imageClick}
+            />
+          ))}
+        </Wrapper>
+      </div>
     );
   }
 }
