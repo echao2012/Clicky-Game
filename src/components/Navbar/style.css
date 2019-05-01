@@ -1,3 +1,22 @@
+.navbar {
+  background-color: rgb(250, 217, 32);
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+}
+
+.navbar-brand {
+  font-size: 3vw;
+  font-weight: 900;
+  color: red;
+}
+
+.nav-item {
+  font-size: 2vw;
+  margin-top: 15px;
+}
+
 .navbar ul {
   flex-direction: row;
   width: 100%;

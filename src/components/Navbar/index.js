@@ -3,8 +3,7 @@ import "./style.css";
 
 function Navbar(props) {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-
+    <nav className="navbar navbar-expand-lg">
       <ul className="navbar-nav">
         <li><a className="navbar-brand" href="/">Memory Game</a></li>
         <li className="nav-item">{props.status}</li>

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ImgCard from "./components/ImgCard";
 import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
+import Jumbotron from "./components/Jumbotron"
 import images from "./images.json";
 
 class App extends Component {
@@ -66,6 +67,7 @@ class App extends Component {
           score={this.state.score}
           topScore={this.state.topScore}
         />
+        <Jumbotron />
         <Wrapper>
           {this.state.images.map(item => (
             <ImgCard
