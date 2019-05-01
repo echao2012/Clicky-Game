@@ -1,51 +1,51 @@
 [
   {
     "id": 1,
-    "image": "/assets/images/boo.png"
+    "image": "./assets/images/boo.png"
   },
   {
     "id": 2,
-    "image": "/assets/images/bullet-bill.png"
+    "image": "./assets/images/bullet-bill.png"
 
   },
   {
     "id": 3,
-    "image": "/assets/images/chain-chomp.png"
+    "image": "./assets/images/chain-chomp.png"
   },
   {
     "id": 4,
-    "image": "/assets/images/coin.png"
+    "image": "./assets/images/coin.png"
   },
   {
     "id": 5,
-    "image": "/assets/images/flower-fire.png"
+    "image": "./assets/images/flower-fire.png"
   },
   {
     "id": 6,
-    "image": "/assets/images/green-shell.png"
+    "image": "./assets/images/green-shell.png"
   },
   {
     "id": 7,
-    "image": "/assets/images/mushroom-1up.png"
+    "image": "./assets/images/mushroom-1up.png"
   },
   {
     "id": 8,
-    "image": "/assets/images/mushroom-life.png"
+    "image": "./assets/images/mushroom-life.png"
   },
   {
     "id": 9,
-    "image": "/assets/images/mushroom-super.png"
+    "image": "./assets/images/mushroom-super.png"
   },
   {
     "id": 10,
-    "image": "/assets/images/question-block.png"
+    "image": "./assets/images/question-block.png"
   },
   {
     "id": 11,
-    "image": "/assets/images/red-shell.png"
+    "image": "./assets/images/red-shell.png"
   },
   {
     "id": 12,
-    "image": "/assets/images/star.png"
+    "image": "./assets/images/star.png"
   }
 ]
